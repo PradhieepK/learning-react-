@@ -1,14 +1,17 @@
+import { Provider } from 'react-redux';
 import './App.css';
-import HelloWorld from './components/HelloWorld';
-import HelloGoodWorld from './components/HelloGoodWorld';
-import Form from './components/Form';
+import Store from './store/Store';
+import Employee from './components/Employee';
 
 function App() {
   return (
     <div className="App">
-      <HelloWorld />
+      <Provider store={Store}>
+      {/* <HelloWorld />
       <HelloGoodWorld />
-      <Form />
+      <Form /> */}
+      <Employee />
+      </Provider>
     </div>
   );
 }
